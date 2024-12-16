@@ -12,7 +12,7 @@
     }
   ],
   "api": {
-    "baseUrl": "http://localhost:3000",
+    "baseUrl": "https://api.orders.sdigital2.com",
     "paramFields": {
       "expanded": "topLevel"
     },
@@ -29,9 +29,6 @@
     "primary": "#0D9373"
   },
   "favicon": "/assets/favicon.png",
-  "footerSocials": {
-    "github": "https://github.com/your-repo"
-  },
   "logo": {
     "dark": "/assets/favicon.png",
     "light": "/assets/favicon.png"
@@ -114,15 +111,5 @@
   "topAnchor": {
     "icon": "book-open",
     "name": "Documentation"
-  },
-  "topbarCtaButton": {
-    "name": "Get Started",
-    "url": "https://github.com/your-repo"
-  },
-  "topbarLinks": [
-    {
-      "name": "Support",
-      "url": "mailto:support@example.com"
-    }
-  ]
+  }
 }
