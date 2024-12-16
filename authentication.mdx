@@ -36,7 +36,7 @@ const headers = {
 }
 
 // Test authentication
-const response = await fetch('https://api.orders.sdigital2.com/api/users', {
+const response = await fetch('https://api.orders.sdigital2.com/v1/users', {
   headers,
 })
 
@@ -60,7 +60,7 @@ headers = {
 # Test authentication
 try:
     response = requests.get(
-        'https://api.orders.sdigital2.com/api/users',
+        'https://api.orders.sdigital2.com/v1/users',
         headers=headers
     )
     response.raise_for_status()

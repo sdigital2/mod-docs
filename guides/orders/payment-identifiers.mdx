@@ -27,7 +27,7 @@ When a fiat order is created, you can request its payment identifiers:
 ```typescript TypeScript
 async function requestPaymentIdentifiers(orderId: string) {
   const response = await fetch(
-    `https://api.orders.sdigital2.com/api/orders/${orderId}/payment_identifiers`,
+    `https://api.orders.sdigital2.com/v1/orders/${orderId}/payment_identifiers`,
     {
       method: 'PUT',
       headers: {
@@ -75,7 +75,7 @@ class PaymentIdentifiers(TypedDict):
 
 def request_payment_identifiers(order_id: str) -> PaymentIdentifiers:
     response = requests.put(
-        f'https://api.orders.sdigital2.com/api/orders/{order_id}/payment_identifiers',
+        f'https://api.orders.sdigital2.com/v1/orders/{order_id}/payment_identifiers',
         headers={
             'Content-Type': 'application/json',
             'x-api-key': os.getenv('API_KEY')
@@ -222,7 +222,7 @@ async function requestPaymentIdentifiersWithRetry(
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
       const response = await fetch(
-        `https://api.orders.sdigital2.com/api/orders/${orderId}/payment_identifiers`,
+        `https://api.orders.sdigital2.com/v1/orders/${orderId}/payment_identifiers`,
         {
           method: 'PUT',
           headers: {
@@ -265,7 +265,7 @@ def request_payment_identifiers_with_retry(
     for attempt in range(1, max_retries + 1):
         try:
             response = requests.put(
-                f'https://api.orders.sdigital2.com/api/orders/{order_id}/payment_identifiers',
+                f'https://api.orders.sdigital2.com/v1/orders/{order_id}/payment_identifiers',
                 headers={
                     'Content-Type': 'application/json',
                     'x-api-key': os.getenv('API_KEY')

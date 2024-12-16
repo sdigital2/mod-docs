@@ -83,7 +83,7 @@ async function makeApiRequest<T>(
 
 // Example usage
 try {
-  const order = await makeApiRequest('https://api.orders.sdigital2.com/api/orders/123')
+  const order = await makeApiRequest('https://api.orders.sdigital2.com/v1/orders/123')
   console.log('Order:', order)
 } catch (error) {
   console.error('Failed to fetch order:', error)
@@ -124,7 +124,7 @@ def make_api_request(
 
 # Example usage
 try:
-    order = make_api_request('https://api.orders.sdigital2.com/api/orders/123')
+    order = make_api_request('https://api.orders.sdigital2.com/v1/orders/123')
     print('Order:', order)
 except Exception as error:
     print('Failed to fetch order:', error)
@@ -173,7 +173,7 @@ async function makeApiRequestWithRetry<T>(
 // Example usage
 try {
   const order = await makeApiRequestWithRetry(
-    'https://api.orders.sdigital2.com/api/orders/123'
+    'https://api.orders.sdigital2.com/v1/orders/123'
   )
   console.log('Order:', order)
 } catch (error) {
@@ -218,7 +218,7 @@ def make_api_request_with_retry(
 # Example usage
 try:
     order = make_api_request_with_retry(
-        'https://api.orders.sdigital2.com/api/orders/123'
+        'https://api.orders.sdigital2.com/v1/orders/123'
     )
     print('Order:', order)
 except Exception as error:
@@ -270,7 +270,7 @@ async function makeApiRequestWithRateLimit<T>(
 // Example usage
 try {
   const orders = await makeApiRequestWithRateLimit(
-    'https://api.orders.sdigital2.com/api/orders'
+    'https://api.orders.sdigital2.com/v1/orders'
   )
   console.log('Orders:', orders)
 } catch (error) {
@@ -315,7 +315,7 @@ def make_api_request_with_rate_limit(
 # Example usage
 try:
     orders = make_api_request_with_rate_limit(
-        'https://api.orders.sdigital2.com/api/orders'
+        'https://api.orders.sdigital2.com/v1/orders'
     )
     print('Orders:', orders)
 except Exception as error:
@@ -354,7 +354,7 @@ function isValidationError(error: unknown): error is ValidationError {
 
 async function createOrder(orderData: OrderCreate) {
   try {
-    const response = await fetch('https://api.orders.sdigital2.com/api/orders', {
+    const response = await fetch('https://api.orders.sdigital2.com/v1/orders', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -403,7 +403,7 @@ def is_validation_error(error: Any) -> bool:
 def create_order(order_data: dict):
     try:
         response = requests.post(
-            'https://api.orders.sdigital2.com/api/orders',
+            'https://api.orders.sdigital2.com/v1/orders',
             headers={
                 'Content-Type': 'application/json',
                 'x-api-key': os.getenv('API_KEY')

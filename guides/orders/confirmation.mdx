@@ -40,7 +40,7 @@ interface OrderConfirm {
 
 async function confirmOrder(orderId: string, data: OrderConfirm) {
   const response = await fetch(
-    `https://api.orders.sdigital2.com/api/orders/${orderId}/confirm`,
+    `https://api.orders.sdigital2.com/v1/orders/${orderId}/confirm`,
     {
       method: 'PUT',
       headers: {
@@ -80,7 +80,7 @@ class OrderConfirm(TypedDict):
 
 def confirm_order(order_id: str, data: OrderConfirm):
     response = requests.put(
-        f'https://api.orders.sdigital2.com/api/orders/{order_id}/confirm',
+        f'https://api.orders.sdigital2.com/v1/orders/{order_id}/confirm',
         headers={
             'Content-Type': 'application/json',
             'x-api-key': os.getenv('API_KEY')
@@ -112,7 +112,7 @@ For fiat orders, request payment identifiers (IMAD/OMAD):
 ```typescript TypeScript
 async function requestPaymentIdentifiers(orderId: string) {
   const response = await fetch(
-    `https://api.orders.sdigital2.com/api/orders/${orderId}/payment_identifiers`,
+    `https://api.orders.sdigital2.com/v1/orders/${orderId}/payment_identifiers`,
     {
       method: 'PUT',
       headers: {
@@ -146,7 +146,7 @@ if (identifiers.notes) {
 ```python Python
 def request_payment_identifiers(order_id: str):
     response = requests.put(
-        f'https://api.orders.sdigital2.com/api/orders/{order_id}/payment_identifiers',
+        f'https://api.orders.sdigital2.com/v1/orders/{order_id}/payment_identifiers',
         headers={
             'Content-Type': 'application/json',
             'x-api-key': os.getenv('API_KEY')
@@ -178,7 +178,7 @@ Monitor the order's status after confirmation:
 
 ```typescript TypeScript
 async function getOrderStatus(orderId: string) {
-  const response = await fetch(`https://api.orders.sdigital2.com/api/orders/${orderId}`, {
+  const response = await fetch(`https://api.orders.sdigital2.com/v1/orders/${orderId}`, {
     headers: {
       'x-api-key': process.env.API_KEY,
     },
@@ -208,7 +208,7 @@ if (order.status === 'received') {
 ```python Python
 def get_order_status(order_id: str):
     response = requests.get(
-        f'https://api.orders.sdigital2.com/api/orders/{order_id}',
+        f'https://api.orders.sdigital2.com/v1/orders/{order_id}',
         headers={'x-api-key': os.getenv('API_KEY')}
     )
 
@@ -261,7 +261,7 @@ async function confirmOrderWithRetry(
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
       const response = await fetch(
-        `https://api.orders.sdigital2.com/api/orders/${orderId}/confirm`,
+        `https://api.orders.sdigital2.com/v1/orders/${orderId}/confirm`,
         {
           method: 'PUT',
           headers: {
@@ -315,7 +315,7 @@ def confirm_order_with_retry(
     for attempt in range(1, max_retries + 1):
         try:
             response = requests.put(
-                f'https://api.orders.sdigital2.com/api/orders/{order_id}/confirm',
+                f'https://api.orders.sdigital2.com/v1/orders/{order_id}/confirm',
                 headers={
                     'Content-Type': 'application/json',
                     'x-api-key': os.getenv('API_KEY')
