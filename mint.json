@@ -12,7 +12,7 @@
     }
   ],
   "api": {
-    "baseUrl": "https://api.orders.sdigital2.com",
+    "baseUrl": "https://sandbox.api.orders.sdigital2.com",
     "paramFields": {
       "expanded": "topLevel"
     },
@@ -102,10 +102,6 @@
         "/guides/error-handling",
         "/guides/validation"
       ]
-    },
-    {
-      "group": "Support",
-      "pages": ["/support"]
     }
   ],
   "topAnchor": {
