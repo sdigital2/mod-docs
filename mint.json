@@ -40,7 +40,11 @@
   "navigation": [
     {
       "group": "Getting Started",
-      "pages": ["/introduction", "/quickstart", "/authentication"]
+      "pages": [
+        "/introduction",
+        "/quickstart",
+        "/authentication"
+      ]
     },
     {
       "group": "Orders",
@@ -63,6 +67,14 @@
       ]
     },
     {
+      "group": "Webhooks",
+      "pages": [
+        "/api-reference/webhooks/list-webhooks",
+        "/api-reference/webhooks/create-webhook",
+        "/api-reference/webhooks/delete-webhook"
+      ]
+    },
+    {
       "group": "Schemas",
       "pages": [
         "/api-reference/schemas/order",
@@ -80,7 +92,8 @@
               ]
             }
           ]
-        }
+        },
+        "/api-reference/schemas/webhook"
       ]
     },
     {
