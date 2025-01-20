@@ -17,13 +17,22 @@ This guide explains how to confirm orders and track their status through the con
 </CardGroup>
 
 ## Order Status Flow
+**Off-ramp**
 
-1. `pending`: Initial state after creation
-2. `submitted`: Order confirmed with transaction hash
-3. `raised`: Funds detected
-4. `sent`: Transfer initiated
-5. `received`: Transfer completed
-6. `cancelled`: Order cancelled
+- `Created`: Order has been created
+- `In Compliance Review`: Compliance is reviewing the details in the submission
+- `Processing Payment`: Payment for this transaction is processing and will be sent out shortly
+- `Completed`: The payment has been successfully sent. While we can't specify the exact time it will reach the recipient's account, it usually depends on interbank transfer schedules and the recipient's bank processing times. Rest assured, the funds are in transit.
+- `Cancelled`: Payment has been cancelled
+
+**On-ramp**
+
+- `Created`: Order has been created
+- `Awaiting funds`: We're waiting for your funds to be sent and arrive at our bank. Once received, we'll promptly process the transaction. Funds settled before 4 PM ET are processed the same day; after 4 PM ET, they're processed the next banking day.
+- `In Compliance Review`: Compliance is reviewing the details in the submission
+- `Processing Settlement`: Settlement for this transaction will be sent out shortly.
+- `Completed`: Funds have been settled to the recipient Wallet
+- `Cancelled`: Payment has been cancelled
 
 ## Confirming Orders
 
